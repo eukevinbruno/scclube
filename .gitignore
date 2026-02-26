@@ -1,0 +1,19 @@
+# Ignorar as duplicatas e lixo da raiz (com barra no início)
+/novo/
+/site/
+/novo_estilo/
+/tmp/
+/.gems/
+/includes/
+
+# Ignorar arquivos soltos de teste na raiz
+#/boleto.jpg
+#/logo.png
+#/info.php
+
+# Ignorar pastas pesadas do Laravel em qualquer lugar
+vendor/
+node_modules/
+storage/logs/*.log
+storage/framework/views/*.php
+.env

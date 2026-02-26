@@ -1,1 +1,1 @@
-"# site-sc-clube""# scclube" 
+"# site-sc-clube"
