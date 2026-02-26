@@ -1,0 +1,17 @@
+##### LOCAWEB - NAO REMOVER #####
+#AddHandler php56-script .php
+#suPHP_ConfigPath /home/scclube/
+##### LOCAWEB - NAO REMOVER #####
+
+RewriteEngine on
+
+# Suas regras para a Landing Page de Cotação
+# Elas devem vir ANTES das regras que redirecionam para 'novo/public/'
+RewriteRule ^cotacao/?$ cotacao/index.html [L]
+RewriteRule ^cotacao/(.*)$ cotacao/$1 [L]
+
+# Regras existentes que redirecionam o domínio principal para 'novo/public/'
+RewriteCond %{HTTP_HOST} ^scclube.com.br$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.scclube.com.br$
+RewriteCond %{REQUEST_URI} !novo/public/
+RewriteRule (.*) /novo/public/$1 [L]
